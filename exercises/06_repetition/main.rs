@@ -4,7 +4,11 @@ fn print_success() {
 }
 ////////// DO NOT CHANGE ABOVE HERE /////////
 
-// TODO: create `if_any!()` macro.
+macro_rules! if_any {
+    ($($x:expr),+; $code:block) => {
+        if $($x) || + $code
+    };
+}
 
 ////////// DO NOT CHANGE BELOW HERE /////////
 
